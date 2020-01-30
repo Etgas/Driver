@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+
+    app:startDestination="@id/driverFragment">
+
+    <fragment
+        android:id="@+id/driverFragment"
+        android:name="com.generalmobile.app.driverexample.ui.drivers.DriverFragment"
+        android:label="DriverFragment"
+        tools:layout="@layout/fragment_driver"
+        >
+        <action
+            android:id="@+id/action_driverFragment_to_detayFragment"
+            app:destination="@id/detayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.generalmobile.app.driverexample.ui.detay.DetayFragment"
+        android:label="DetayFragment"
+        tools:layout="@layout/fragment_detay"
+        >
+        <argument
+            android:name="id"
+            app:argType="integer"
+            android:defaultValue="0" />
+    </fragment>
+</navigation>

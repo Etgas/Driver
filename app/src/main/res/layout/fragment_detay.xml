@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="com.generalmobile.app.driverexample.ui.detay.DetayViewModel" />
+    </data>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:id="@+id/detayLayout"
+    android:orientation="horizontal"
+    android:layout_height="match_parent"
+    tools:context=".ui.detay.DetayFragment">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:loadImage="@{viewModel.liste.image}"
+        android:id="@+id/imgDetay"
+        android:paddingStart="20dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:id="@+id/detayAge"
+        android:layout_marginLeft="20dp"
+        app:loadAge="@{viewModel.liste.age.toString()}"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/detayTeam"
+        android:layout_marginLeft="20dp"
+        android:textSize="20sp"
+        android:text="@{viewModel.liste.team}"/>
+
+
+
+</LinearLayout>
+</layout>
