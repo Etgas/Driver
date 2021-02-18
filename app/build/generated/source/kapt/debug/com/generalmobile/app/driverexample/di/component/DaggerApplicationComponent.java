@@ -25,6 +25,7 @@ import com.generalmobile.app.driverexample.ui.drivers.DriverViewModel;
 import com.generalmobile.app.driverexample.ui.drivers.DriverViewModel_MembersInjector;
 import com.generalmobile.app.driverexample.ui.main.MainActivityViewModel;
 import com.generalmobile.app.driverexample.ui.main.MainActivityViewModel_MembersInjector;
+import com.generalmobile.app.driverexample.ui.movie.MainFragmentViewModel;
 import com.google.gson.Gson;
 import dagger.internal.DoubleCheck;
 import dagger.internal.Preconditions;
@@ -119,6 +120,9 @@ public final class DaggerApplicationComponent implements ApplicationComponent {
   public void inject(DriverViewModel driverViewModel) {
     injectDriverViewModel(driverViewModel);
   }
+
+  @Override
+  public void inject(MainFragmentViewModel mainFragmentViewModel) {}
 
   private MainActivityViewModel injectMainActivityViewModel(MainActivityViewModel instance) {
     MainActivityViewModel_MembersInjector.injectDb(instance, getDatabaseProvider.get());

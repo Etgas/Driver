@@ -1,30 +1,50 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
 
-    app:startDestination="@id/driverFragment">
+    app:startDestination="@id/homeFragment">
 
     <fragment
-        android:id="@+id/driverFragment"
-        android:name="com.generalmobile.app.driverexample.ui.drivers.DriverFragment"
-        android:label="DriverFragment"
-        tools:layout="@layout/fragment_driver"
-        >
+        android:id="@+id/homeFragment"
+        android:name="com.generalmobile.app.driverexample.ui.home.HomeFragment"
+        android:label="HomeFragment">
         <action
-            android:id="@+id/action_driverFragment_to_detayFragment"
-            app:destination="@id/detayFragment" />
+            android:id="@+id/action_homeFragment_to_loLFragment"
+            app:destination="@id/LoLFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_LoRFragment"
+            app:destination="@id/LoRFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_TFTFragment"
+            app:destination="@id/TFTFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_valoFragment"
+            app:destination="@id/valoFragment" />
     </fragment>
     <fragment
-        android:id="@+id/detayFragment"
-        android:name="com.generalmobile.app.driverexample.ui.detay.DetayFragment"
-        android:label="DetayFragment"
-        tools:layout="@layout/fragment_detay"
-        >
-        <argument
-            android:name="id"
-            app:argType="integer"
-            android:defaultValue="0" />
+        android:id="@+id/LoLFragment"
+        android:name="com.generalmobile.app.driverexample.ui.LoL.LoLFragment"
+        android:label="LoLFragment">
+        <action
+            android:id="@+id/action_LoLFragment_to_challengersFragment"
+            app:destination="@id/challengersFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/challengersFragment"
+        android:name="com.generalmobile.app.driverexample.ui.LoL.challengers.ChallengersFragment"
+        android:label="ChallengersFragment" />
+    <fragment
+        android:id="@+id/LoRFragment"
+        android:name="com.generalmobile.app.driverexample.ui.lor.LoRFragment"
+        android:label="LoRFragment" />
+    <fragment
+        android:id="@+id/TFTFragment"
+        android:name="com.generalmobile.app.driverexample.ui.tft.TFTFragment"
+        android:label="TFTFragment" />
+    <fragment
+        android:id="@+id/valoFragment"
+        android:name="com.generalmobile.app.driverexample.ui.valo.ValoFragment"
+        android:label="ValoFragment" />
+
 </navigation>

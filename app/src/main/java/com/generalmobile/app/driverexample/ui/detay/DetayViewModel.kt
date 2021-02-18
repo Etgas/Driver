@@ -12,7 +12,7 @@ import javax.inject.Inject
 class DetayViewModel(app : Application):BaseViewModel(app) {
 
     @Inject
-    lateinit var baseApi : driverApi
+    lateinit var driverApi: driverApi
 
     var liste:ObservableField<DriverDetay> = ObservableField()
 
@@ -21,6 +21,6 @@ class DetayViewModel(app : Application):BaseViewModel(app) {
     }
 
     fun getDetay(id:Int):Observable<DriverDetay>{
-        return baseApi.getDetay(id = id)
+        return driverApi.getDetay(id = id)
     }
 }

@@ -18,18 +18,18 @@ class MainActivity : BaseActivity<MainActivityViewModel, ActivityMainBinding>(Ma
     }
 
     private fun setupNavigation() {
-        val navController =findNavController(R.id.dashboardFragment)
+        val navController = findNavController(R.id.mainFragment)
         setupActionBarWithNavController(navController)
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        val navController = findNavController(R.id.dashboardFragment)
+        val navController = findNavController(R.id.mainFragment)
         if(navController.currentDestination?.id != item?.itemId)
             NavigationUI.onNavDestinationSelected(item!!,navController)
         return super.onOptionsItemSelected(item)
     }
 
-    override fun onSupportNavigateUp(): Boolean =findNavController(R.id.dashboardFragment).navigateUp()
+    override fun onSupportNavigateUp(): Boolean = findNavController(R.id.mainFragment).navigateUp()
 
 
 

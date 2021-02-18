@@ -4,7 +4,9 @@ package com.generalmobile.app.driverexample.databinding;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.databinding.Bindable;
@@ -19,13 +21,21 @@ public abstract class ActivityDashboardBinding extends ViewDataBinding {
   @NonNull
   public final RelativeLayout dashboardLayout;
 
+  @NonNull
+  public final ImageView imgDashboard;
+
+  @NonNull
+  public final TextView tvDashboard;
+
   @Bindable
   protected DashboardViewModel mViewModel;
 
   protected ActivityDashboardBinding(Object _bindingComponent, View _root, int _localFieldCount,
-      RelativeLayout dashboardLayout) {
+      RelativeLayout dashboardLayout, ImageView imgDashboard, TextView tvDashboard) {
     super(_bindingComponent, _root, _localFieldCount);
     this.dashboardLayout = dashboardLayout;
+    this.imgDashboard = imgDashboard;
+    this.tvDashboard = tvDashboard;
   }
 
   public abstract void setViewModel(@Nullable DashboardViewModel viewModel);

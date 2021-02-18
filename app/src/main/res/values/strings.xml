@@ -1,8 +1,20 @@
-<resources>
-    <string name="app_name">Driverexample</string>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">RiotStatsApp</string>
     <string name="position" translatable="false">position</string>
     <string name="title">Title</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_word">Arama Yapın</string>
+
+    <string name="search_artist">Search For Artist</string>
+    <string name="search_song">Search For Song</string>
+    <string name="api_key" tools:ignore="TypographyDashes">RGAPI–ee91e62d-e1da-4c36-90c8-71478075612a</string>
+    <string name="lol_stats">LoL STATS</string>
+    <string name="search">Search</string>
+    <string name="lol">LoL</string>
+    <string name="home">HOME</string>
+    <string name="valo">VALO</string>
+    <string name="lor">LoR</string>
+    <string name="tft">TFT</string>
 </resources>

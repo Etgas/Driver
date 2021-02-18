@@ -1,16 +1,21 @@
 package com.generalmobile.app.driverexample.core
 
-import androidx.lifecycle.ViewModelProviders
-import androidx.databinding.DataBindingUtil
-import androidx.databinding.ViewDataBinding
 import android.os.Bundle
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
+import androidx.databinding.ViewDataBinding
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
+import javax.inject.Inject
 
 abstract class BaseActivity<VM : BaseViewModel, DB : ViewDataBinding>(private val mViewModelClass: Class<VM>) : AppCompatActivity() {
 
     @LayoutRes
     abstract fun getLayoutRes(): Int
+
+    @Inject
+    internal lateinit var viewModelProviderFactory: ViewModelProvider.Factory
 
     val binding by lazy {
         DataBindingUtil.setContentView(this, getLayoutRes()) as DB

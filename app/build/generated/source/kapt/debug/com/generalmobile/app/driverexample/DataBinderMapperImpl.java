@@ -11,6 +11,7 @@ import com.generalmobile.app.driverexample.databinding.ActivityMainBindingImpl;
 import com.generalmobile.app.driverexample.databinding.FragmentDetayBindingImpl;
 import com.generalmobile.app.driverexample.databinding.FragmentDriverAdapterBindingImpl;
 import com.generalmobile.app.driverexample.databinding.FragmentDriverBindingImpl;
+import com.generalmobile.app.driverexample.databinding.FragmentMainBindingImpl;
 import java.lang.IllegalArgumentException;
 import java.lang.Integer;
 import java.lang.Object;
@@ -32,7 +33,9 @@ public class DataBinderMapperImpl extends DataBinderMapper {
 
   private static final int LAYOUT_FRAGMENTDRIVERADAPTER = 5;
 
-  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(5);
+  private static final int LAYOUT_FRAGMENTMAIN = 6;
+
+  private static final SparseIntArray INTERNAL_LAYOUT_ID_LOOKUP = new SparseIntArray(6);
 
   static {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.generalmobile.app.driverexample.R.layout.activity_dashboard, LAYOUT_ACTIVITYDASHBOARD);
@@ -40,6 +43,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.generalmobile.app.driverexample.R.layout.fragment_detay, LAYOUT_FRAGMENTDETAY);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.generalmobile.app.driverexample.R.layout.fragment_driver, LAYOUT_FRAGMENTDRIVER);
     INTERNAL_LAYOUT_ID_LOOKUP.put(com.generalmobile.app.driverexample.R.layout.fragment_driver_adapter, LAYOUT_FRAGMENTDRIVERADAPTER);
+    INTERNAL_LAYOUT_ID_LOOKUP.put(com.generalmobile.app.driverexample.R.layout.fragment_main, LAYOUT_FRAGMENTMAIN);
   }
 
   @Override
@@ -80,6 +84,12 @@ public class DataBinderMapperImpl extends DataBinderMapper {
             return new FragmentDriverAdapterBindingImpl(component, view);
           }
           throw new IllegalArgumentException("The tag for fragment_driver_adapter is invalid. Received: " + tag);
+        }
+        case  LAYOUT_FRAGMENTMAIN: {
+          if ("layout/fragment_main_0".equals(tag)) {
+            return new FragmentMainBindingImpl(component, view);
+          }
+          throw new IllegalArgumentException("The tag for fragment_main is invalid. Received: " + tag);
         }
       }
     }
@@ -135,7 +145,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
   }
 
   private static class InnerLayoutIdLookup {
-    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(5);
+    static final HashMap<String, Integer> sKeys = new HashMap<String, Integer>(6);
 
     static {
       sKeys.put("layout/activity_dashboard_0", com.generalmobile.app.driverexample.R.layout.activity_dashboard);
@@ -143,6 +153,7 @@ public class DataBinderMapperImpl extends DataBinderMapper {
       sKeys.put("layout/fragment_detay_0", com.generalmobile.app.driverexample.R.layout.fragment_detay);
       sKeys.put("layout/fragment_driver_0", com.generalmobile.app.driverexample.R.layout.fragment_driver);
       sKeys.put("layout/fragment_driver_adapter_0", com.generalmobile.app.driverexample.R.layout.fragment_driver_adapter);
+      sKeys.put("layout/fragment_main_0", com.generalmobile.app.driverexample.R.layout.fragment_main);
     }
   }
 }

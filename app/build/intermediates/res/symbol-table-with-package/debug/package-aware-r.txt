@@ -1237,6 +1237,7 @@ id icon
 id icon_group
 id ifRoom
 id image
+id imgDashboard
 id imgDetay
 id info
 id invisible
@@ -1361,6 +1362,7 @@ id transition_layout_save
 id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
+id tvDashboard
 id unchecked
 id uniform
 id unlabeled
@@ -1447,6 +1449,7 @@ layout design_text_input_password_icon
 layout fragment_detay
 layout fragment_driver
 layout fragment_driver_adapter
+layout fragment_main
 layout mtrl_layout_snackbar
 layout mtrl_layout_snackbar_include
 layout notification_action
